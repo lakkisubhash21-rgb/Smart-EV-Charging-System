@@ -1,1 +1,21 @@
-ChargingController.java, UserAuth.java, pom.xml
+public class ChargingService {
+    
+    // Logic to prioritize Green Energy
+    public String determinePowerSource(float solarOutput, float windOutput) {
+        if (solarOutput > 5.0 || windOutput > 5.0) {
+            return "RENEWABLE_ENERGY"; // Priority 1
+        } else {
+            return "GRID_POWER"; // Fallback
+        }
+    }
+
+    // Logic to authorize RFID
+    public boolean authorizeUser(String tagId, boolean isActive) {
+        if (tagId != null && isActive) {
+            System.out.println("Access Granted to: " + tagId);
+            return true;
+        }
+        return false;
+    }
+}
+
