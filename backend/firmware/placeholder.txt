@@ -1,1 +1,17 @@
+// Basic logic for NodeMCU
+void setup() {
+  Serial.begin(115200);
+  pinMode(LED_BUILTIN, OUTPUT);
+}
+
+void loop() {
+  // Simulate RFID scan
+  if (Serial.available() > 0) {
+    String tag = Serial.readString();
+    if (tag == "AUTHORIZED_ID") {
+      digitalWrite(LED_BUILTIN, LOW); // Start Charging
+      Serial.println("Charging Started...");
+    }
+  }
+}
 
