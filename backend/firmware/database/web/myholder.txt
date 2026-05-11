@@ -1,1 +1,19 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<html>
+<head>
+    <title>EV Station Dashboard</title>
+    <style>
+        body { font-family: Arial; background: #f4f4f4; text-align: center; }
+        .status-box { padding: 20px; border: 2px solid #2ecc71; display: inline-block; }
+    </style>
+</head>
+<body>
+    <h1>Hybrid Charging Station Monitor</h1>
+    <div class="status-box">
+        <h3>Current Power Source: <span style="color: green;">SOLAR</span></h3>
+        <p>Active RFID Tag: 124-556-990</p>
+        <p>Energy Consumed: 4.2 kWh</p>
+    </div>
+</body>
+</html>
 
